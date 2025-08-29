@@ -1,0 +1,23 @@
+# Application Configuration
+app:
+  name: "Manan Sapaloke"           # Replace with your real name
+  regNo: "22BLC1303"    # Replace with your real registration number
+  email: "manansapalok@gmail.com" # Replace with your real email
+  generateWebhookUrl: "https://bfhldevapigw.healthrx.co.in/hiring/generateWebhook/JAVA"
+
+# HTTP Configuration
+http:
+  connectTimeout: 10000  # 10 seconds
+  readTimeout: 30000     # 30 seconds
+  retry:
+    maxAttempts: 3
+    backoffBase: 1000    # 1 second base for exponential backoff
+
+# Logging Configuration
+logging:
+  level:
+    com.healthrx: DEBUG
+    org.springframework.web: INFO
+    org.springframework.web.client: DEBUG
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} - %msg%n"

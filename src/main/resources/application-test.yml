@@ -1,0 +1,20 @@
+# Test Configuration - Replace with your actual values
+app:
+  name: "Test User"
+  regNo: "VIT2024001"
+  email: "test.user@example.com"
+  generateWebhookUrl: "https://bfhldevapigw.healthrx.co.in/hiring/generateWebhook/JAVA"
+
+# HTTP Configuration for testing
+http:
+  connectTimeout: 5000   # 5 seconds for testing
+  readTimeout: 15000     # 15 seconds for testing
+  retry:
+    maxAttempts: 2
+    backoffBase: 500     # 0.5 second base for testing
+
+# Logging Configuration for testing
+logging:
+  level:
+    com.healthrx: DEBUG
+    org.springframework.web: DEBUG
